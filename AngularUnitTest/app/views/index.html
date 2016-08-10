@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8"/>
+    <!-- Jasmine References -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.3.3/jasmine.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.3.3/jasmine.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.3.3/jasmine-html.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.3.3/boot.min.js"></script>
+
+    <!-- Angular and Angular Mock references -->
+    <script src="../../scripts/lib/angular.min.js"></script>
+    <script type="text/javascript" src="https://code.angularjs.org/1.4.0-rc.2/angular-mocks.js"></script>
+    <script src="../app.js"></script>
+    <script src="../controllers/calculatorController.js"></script>
+    <script src="../../test/calculatorController.spec.js"></script>
+
+</head>
+<body ng-app="calculatorApp">
+    <div ng-controller="CalculatorController as vm">
+        <input ng-model="vm.input1" type="number" />
+        <input ng-model="vm.input2" type="number" />
+        <input type="button" ng-click="vm.sum()" value="=">
+        {{vm.ans}}
+    </div>
+</body>
+</html>
